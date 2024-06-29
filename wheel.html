@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style type="text/css" media="all">
+    body {
+  height: 90vh;
+  width: 90vw;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+   width: 200px;
+  height: 200px;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wheel{
+  height: 120px;
+  width: 120px;
+  background: #42423E;
+  border: solid 10px black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 5px 40px .1px;
+  animation: wheelmove 2s infinite linear 1s;
+}
+@keyframes wheelmove{
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+.spokes{
+  height: 3px;
+  width: 120px;
+  background: silver;
+  position: absolute;
+  box-shadow: 1px 5px 4px .1px;
+}
+/*if 5 spokes and 360deg ==> 360/5 = 72*/
+.two{
+  transform: rotateZ(72deg);
+}
+.three{
+  transform: rotateZ(144deg);
+}
+.four{
+  transform: rotateZ(216deg);
+}
+.five{
+  transform: rotateZ(288deg);
+}
+  </style>
+  <body>
+         
+       <div class="container">
+         <div class="wheel">
+           <div class="spokes one">
+             
+           </div>
+           <div class="spokes two">
+             
+           </div>
+           <div class="spokes three">
+             
+           </div>
+           <div class="spokes four">
+             
+           </div>
+           <div class="spokes five">
+             
+           </div>
+         </div>
+       </div>
+  <script src="script.js"></script>
+  </body>
+</html>
+
